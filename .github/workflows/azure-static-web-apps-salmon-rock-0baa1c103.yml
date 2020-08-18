@@ -25,9 +25,8 @@ jobs:
       
       - name: Show current path
         run: pwd
-      
-      - name: Show current path 2
         run: cd elderbly_blazor_client
+        run: pwd
             
       - name: Build with dotnet
         run: dotnet build --configuration Release

@@ -33,10 +33,10 @@ jobs:
         run: pwd
             
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build  "./elderbly-blazor-client/elderbly-blazor-client.sln" --configuration Release
     
       - name: Publish with dotnet
-        run: dotnet publish --configuration Release 
+        run: dotnet publish "./elderbly-blazor-client/elderbly-blazor-client.sln" --configuration Release 
     
       - name: Upload to Azure
         id: builddeploy
@@ -47,7 +47,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match you app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/elderbly_blazor_client" # App source code path
+          app_location: "/elderbly-blazor-client" # App source code path
           api_location: "" # Api source code path - optional
           app_artifact_location: "/bin/publish/wwwroot" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######

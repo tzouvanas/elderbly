@@ -26,6 +26,8 @@ jobs:
       
       - name: Show current path
         run: pwd
+      
+      - name: Show current path 2
         run: ls
             
       - name: Build with dotnet

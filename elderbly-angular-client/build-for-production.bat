@@ -1,0 +1,1 @@
+ng build --configuration=production --outputPath=dist --deleteOutputPath=true
